@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+input, button {
+  margin: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.phone-frame {
+  margin-top: 20px;
+  width: 250px;
+  height: 500px;
+  border: 10px solid black;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+.phone-frame iframe,
+.phone-frame img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
