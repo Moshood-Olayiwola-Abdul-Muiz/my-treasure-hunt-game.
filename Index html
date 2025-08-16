@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Preview App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>📱 Store Preview</h2>
+
+    <!-- Input for site URL -->
+    <input type="text" id="siteUrl" placeholder="Enter store link (e.g. https://example.com)">
+    <button onclick="previewSite()">Preview</button>
+
+    <!-- Upload image button -->
+    <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+
+    <!-- Phone frame -->
+    <div class="phone-frame">
+      <iframe id="phoneDisplay"></iframe>
+      <img id="uploadedImage" alt="Uploaded Preview" style="display:none;">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
