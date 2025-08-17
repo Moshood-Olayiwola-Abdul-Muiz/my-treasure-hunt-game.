@@ -2,26 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phone Preview App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fake SEO Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>📱 Store Preview</h2>
 
-    <!-- Input for site URL -->
-    <input type="text" id="siteUrl" placeholder="Enter store link (e.g. https://example.com)">
-    <button onclick="previewSite()">Preview</button>
+  <!-- Fake link insert bar (unchanged) -->
+  <div class="link-bar">
+    <input type="text" placeholder="Enter your site URL...">
+    <button id="checkBtn" type="button">Check</button>
+  </div>
 
-    <!-- Upload image button -->
-    <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+  <!-- Phone preview: click to pick any image from device -->
+  <div class="mobile-preview" id="phone" title="Click to upload an image">
+    <img id="phoneImage" alt="Phone preview image">
+  </div>
+  <input type="file" id="uploadInput" accept="image/*">
 
-    <!-- Phone frame -->
-    <div class="phone-frame">
-      <iframe id="phoneDisplay"></iframe>
-      <img id="uploadedImage" alt="Uploaded Preview" style="display:none;">
+  <!-- Dashboard with gauges (unchanged layout/structure) -->
+  <div class="dashboard">
+
+    <!-- Gauge 1 -->
+    <div class="gauge">
+      <svg width="180" height="180" aria-hidden="true">
+        <circle class="bg" cx="90" cy="90" r="70"></circle>
+        <circle class="progress" cx="90" cy="90" r="70"></circle>
+      </svg>
+      <div class="percent-text">49%</div>
+      <div class="label">Performance</div>
+      <div class="input-box">
+        <input type="number" min="0" max="100" value="49">
+        <button class="gauge-btn" type="button">Enter</button>
+      </div>
     </div>
+
+    <!-- Gauge 2 -->
+    <div class="gauge">
+      <svg width="180" height="180" aria-hidden="true">
+        <circle class="bg" cx="90" cy="90" r="70"></circle>
+        <circle class="progress" cx="90" cy="90" r="70"></circle>
+      </svg>
+      <div class="percent-text">62%</div>
+      <div class="label">Page Speed</div>
+      <div class="input-box">
+        <input type="number" min="0" max="100" value="62">
+        <button class="gauge-btn" type="button">Enter</button>
+      </div>
+    </div>
+
+    <!-- Gauge 3 -->
+    <div class="gauge">
+      <svg width="180" height="180" aria-hidden="true">
+        <circle class="bg" cx="90" cy="90" r="70"></circle>
+        <circle class="progress" cx="90" cy="90" r="70"></circle>
+      </svg>
+      <div class="percent-text">85%</div>
+      <div class="label">Accessibility</div>
+      <div class="input-box">
+        <input type="number" min="0" max="100" value="85">
+        <button class="gauge-btn" type="button">Enter</button>
+      </div>
+    </div>
+
   </div>
 
   <script src="script.js"></script>
